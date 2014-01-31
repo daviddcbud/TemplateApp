@@ -8,12 +8,73 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-   <link rel="stylesheet" src="Content\bootstrap.min.css"/>
-   
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Content/Site.css">
+
 </head>
-<body>
+
+<body ng-app="appModule" ng-controller="ShellCtrl" ng-cloak>
+    
+      <!-- Static navbar -->
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">St Charles Parish Assessor</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Staff</a></li>
+<li><a href="#">Maps</a></li>
+<li><a href="#">Forms</a></li>
+<li><a href="#">Search</a></li>
+              <li><a href="/Contact">Contact</a></li>
+              
+            </ul>
+            
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </div>
+</div>
+
+
+<div ng-if="shellmodel.alert !=''" id="alert" class="alert alert-danger">{{shellmodel.alert}}</div>
+    <div wc-overlay wc-overlay-delay="300">
+        <img src="/Content/loading.gif" /><br />
+        Loading..
+    </div>
+    <div class="container body-content">
+       
+        <div ng-view class="slide-animation" id="ng-view">
+
+        </div>
+
+    </div>
+
 
 <script src="https://code.jquery.com/jquery.js"></script>
-<script src="Scripts/bootstrap.min.js"/>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+<script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-resource.min.js"></script>
+    <script src="app/vendor/angular.overlay.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/routes.js"></script>
+
+<script src="app/shareddata.service.js"></script>
+    <script src="app/search/search.service.js"></script>
+    <script src="app/shell.controller.js"></script>
+    <script src="app/home/home.controller.js"></script>
+    
+
 </body>
 </html>

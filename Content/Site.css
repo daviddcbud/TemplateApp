@@ -1,10 +1,5 @@
 ﻿body{
-    margin-top:75px;
-}
-li.nav
-{
-float:left;
-margin-right:5px;
+
 }
 
 .overlayContainer { display: none;}
@@ -59,4 +54,13 @@ margin-right:5px;
 
 #searchBox{
     min-width:200px;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+display: none !important;
+}
+
+#indexHeader{
+  margin-bottom:2px;
+  font-weight:bold;
+font-size: larger;
 }
